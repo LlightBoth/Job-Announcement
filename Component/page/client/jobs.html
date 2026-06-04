@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" theme-mode="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browse Jobs</title>
+  <link rel="stylesheet" href="../../../Assets/css/style.css">
+  <link rel="stylesheet" href="../../../Assets/css/client/privacy.css">
+</head>
+<body>
+
+    <!-- Header Content -->
+    <header class="header">
+        <!-- Your navigation code can load or sit here safely -->
+    </header>
+
+    <!-- Main Content Context -->
+    <main class="main-content py-4">
+        <!-- Hero Section using your badge and layout principles -->
+        <div>
+            <section class="legal-hero my-4">
+            <span class="badge badge--remote">Jobs Availability</span>
+            <h1 class="text-heading">Jobs Announcement</h1>
+            <p class="text-muted">
+                Your privacy is important to us. This Privacy Policy explains how we collect, use, process, and protect your information across our job platform ecosystem.
+            </p>
+            </section>
+        </div>
+
+        <div class="flex-between">
+            <h3>Filter By</h3>
+            <div class="card">
+                <select name="filter" class="filter" id="job-filter" style="background: transparent; border: none; outline: none;font-size: 0.95rem; font-weight: 600; cursor: pointer;">
+                    <option value="general">General</option>
+                    <option value="fulltime">Full-Time</option>
+                    <option value="parttime">Part-Time</option>
+                    <option value="remote">Remote</option>
+                    <option value="freelance">Freelance</option>
+                    <option value="contract">Contract</option>
+                </select>
+            </div>
+        </div>
+        <!-- All Jobs Grid -->
+        <section class="job-grid py-4" id="jobs">
+            <!--Jobs Informations -->
+        </section>
+
+    </main>
+
+    <!-- Footer Content -->
+    <footer class="footer-content"></footer>
+
+    <!-- Script Elements -->
+    <!-- Load Header/Navigation and Footer -->
+    <script src="../../layout/client_layout.js"></script>
+    <script src="../../../Assets/js/mode.js"></script>
+    <script src="../../../Assets/js/jobs.js"></script>
+</body>
+</html>

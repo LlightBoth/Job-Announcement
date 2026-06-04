@@ -1,0 +1,52 @@
+{
+  "companies": [
+    {
+      "id": 1,
+      "name": "Nexus Financial Fintech",
+      "logo": "https://placehold.co/100x100/png?text=Logo",
+      "location": "New York, USA",
+      "website": "https://nexusfinancial.com",
+      "industry": "Fintech",
+      "employees": "500-1000",
+      "description": "A fintech company focused on scalable banking and investment solutions.",
+      "email": "info@nexusfinancial.com",
+      "phone": "+1-212-555-1001",
+      "founded": 2018,
+      "ceo": "John Anderson",
+      "status": "Active",
+      "address": "350 Fifth Avenue, New York, NY, USA"
+    },
+    {
+      "id": 2,
+      "name": "PixelCraft Studio",
+      "logo": "https://placehold.co/100x100/png?text=Company",
+      "location": "San Francisco, USA",
+      "website": "https://pixelcraftstudio.com",
+      "industry": "Design",
+      "employees": "50-100",
+      "description": "Creative agency specializing in UI/UX and product branding.",
+      "email": "hello@pixelcraftstudio.com",
+      "phone": "+1-415-555-2002",
+      "founded": 2016,
+      "ceo": "Sarah Mitchell",
+      "status": "Active",
+      "address": "101 Market Street, San Francisco, CA, USA"
+    },
+    {
+      "id": 3,
+      "name": "GrowthSpark Media",
+      "logo": "https://placehold.co/100x100/png?text=Company",
+      "location": "Los Angeles, USA",
+      "website": "https://growthsparkmedia.com",
+      "industry": "Marketing",
+      "employees": "100-250",
+      "description": "Digital marketing company helping startups scale online.",
+      "email": "contact@growthsparkmedia.com",
+      "phone": "+1-310-555-3003",
+      "founded": 2019,
+      "ceo": "Michael Roberts",
+      "status": "Active",
+      "address": "800 Sunset Boulevard, Los Angeles, CA, USA"
+    }
+  ]
+}

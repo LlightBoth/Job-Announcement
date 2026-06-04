@@ -1,0 +1,79 @@
+/* ==========================================================================
+   User Profile Dashboard Layout System
+   ========================================================================== */
+
+.profile-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* 1. Avatar Graphic Frame Creator */
+.profile-avatar-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-avatar {
+  width: 96px;
+  height: 96px;
+  background: linear-gradient(135deg, var(--brand-primary, #3b82f6), #1d4ed8);
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: var(--shadow-md, 0 4px 6px -1px rgba(0, 0, 0, 0.1));
+  border: 4px solid var(--card-bg, #ffffff);
+}
+
+/* 2. Skills Cluster Assembly */
+.skills-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skills-group .badge {
+  font-size: 0.85rem;
+  padding: 0.5rem 0.85rem;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+/* Profile specific adjustment alignment parameters */
+.profile-meta p {
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+}
+.profile-body label{
+  color: var(--text-main);
+}
+
+.profile-body input{
+  background-color: var(--bg-main);
+}
+
+.profile-body option{
+  background-color: var(--bg-main);
+  color: var(--text-main);
+}
+
+/* ==========================================================================
+   Responsive Adaptations
+   ========================================================================== */
+@media only screen and (max-width: 768px) {
+  .profile-sidebar, 
+  .profile-body {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+  
+  .profile-sidebar {
+    margin-bottom: 1.5rem;
+  }
+}

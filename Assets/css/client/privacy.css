@@ -1,0 +1,71 @@
+/* Hero Section Formatting */
+.legal-hero {
+  text-align: center;
+}
+
+.legal-hero h1 {
+  font-size: 3rem;
+  color: var(--brand-primary);
+  margin-bottom: 1rem;
+}
+
+.legal-hero p {
+  font-size: 1.15rem;
+  max-width: 650px;
+  margin: 0 auto 1.5rem;
+}
+
+/* Document Specific Date Tag Override */
+.updated-date {
+  background-color: color-mix(in srgb, var(--brand-primary) calc(var(--badge-bg-alpha) * 100%), transparent);
+  color: var(--brand-primary);
+}
+
+/* Vertical Flow Stack for Legal Text (Alternative to Grid layouts) */
+.legal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+/* Card custom spacing overrides for legal documents */
+.legal-content .card {
+  padding: 2rem;
+}
+
+.legal-content .text-heading {
+  color: var(--brand-primary); /* Keeps numeric headings matching brand blue accents */
+  font-size: 1.35rem;
+  margin-bottom: 0.75rem;
+}
+
+.filter {
+  color: var(--text-main);
+}
+option {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+}
+
+/* ==========================================================================
+   Responsive Adaptations
+   ========================================================================== */
+
+@media only screen and (max-width: 768px) {
+  .legal-hero {
+    padding: 2.5rem 1rem 1.5rem;
+  }
+
+  .legal-hero h1 {
+    font-size: 2.25rem;
+  }
+
+  .legal-hero p {
+    font-size: 1rem;
+  }
+
+  .legal-content .card {
+    padding: 1.5rem;
+  }
+}

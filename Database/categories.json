@@ -1,0 +1,60 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Technology",
+      "slug": "technology",
+      "icon": "bi bi-code-slash",
+      "description": "Software engineering, web development, DevOps, and IT roles.",
+      "jobs_id": [1, 4, 6, 9]
+    },
+    {
+      "id": 2,
+      "name": "Design",
+      "slug": "design",
+      "icon": "bi bi-palette",
+      "description": "UI/UX, graphic design, branding, and creative positions.",
+      "jobs_id": [2]
+    },
+    {
+      "id": 3,
+      "name": "Marketing",
+      "slug": "marketing",
+      "icon": "bi bi-megaphone",
+      "description": "Digital marketing, SEO, advertising, and growth strategy jobs_id.",
+      "jobs_id": [3]
+    },
+    {
+      "id": 4,
+      "name": "Human Resources",
+      "slug": "hr",
+      "icon": "bi bi-people",
+      "description": "Recruitment, employee management, and HR operations roles.",
+      "jobs_id": [5]
+    },
+    {
+      "id": 5,
+      "name": "Analytics",
+      "slug": "analytics",
+      "icon": "bi bi-bar-chart",
+      "description": "Data analysis, business intelligence, and reporting positions.",
+      "jobs_id": [7]
+    },
+    {
+      "id": 6,
+      "name": "Customer Support",
+      "slug": "support",
+      "icon": "bi bi-headset",
+      "description": "Customer success, technical support, and client relations jobs_id.",
+      "jobs_id": [8]
+    },
+    {
+      "id": 7,
+      "name": "Content Creation",
+      "slug": "content",
+      "icon": "bi bi-file-earmark-text",
+      "description": "Writing, editing, SEO content, and copywriting opportunities.",
+      "jobs_id": [10]
+    }
+  ]
+}

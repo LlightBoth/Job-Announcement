@@ -1,0 +1,196 @@
+/* ==========================================================================
+    VARIABLES 
+   ========================================================================== */
+:root {
+  /* 1. Color Palette */
+  --brand-primary: #2563eb;       /* Corporate Blue (Buttons, Primary Links) */
+  --brand-primary-hover: #1d4ed8;
+  --accent-success: #16a34a;      /* Full-time Badge, Active Status */
+  --accent-warning: #ea580c;      /* Freelance / Part-time Badge */
+  --accent-info: #0284c7;         /* Remote / Internship Badge */
+
+  /* Neutral Light Palette */
+  --neutral-100: #ffffff;
+  --neutral-200: #f8fafc;         /* Main app background */
+  --neutral-300: #f1f5f9;         /* Component cards / Borders */
+  --neutral-400: #e2e8f0;
+  --neutral-700: #475569;         /* Muted text (Job descriptions) */
+  --neutral-900: #0f172a;         /* Heading text */
+
+  /* Neutral Dark Palette */
+  --dark-100: #0b0f19;            /* Deep app background */
+  --dark-200: #151b2c;            /* Component cards */
+  --dark-300: #1e293b;            /* Borders / Dividers */
+  --dark-700: #94a3b8;            /* Muted text */
+  --dark-900: #f8fafc;            /* Heading text */
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* ==========================================================================
+    GRID APPLICATION LAYOUT FRAME
+   ========================================================================== */
+body {
+    display: grid;
+    grid-template-areas: 
+        "ASIDE HEADER HEADER HEADER"
+        "ASIDE MAIN   MAIN   MAIN"
+        "ASIDE FOOTER FOOTER FOOTER";
+    
+    grid-template-columns: 240px repeat(3, 1fr);
+    grid-template-rows: max-content 1fr max-content;
+    height: 100vh;
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    overflow: hidden; /* Prevents the body itself from scrolling */
+}
+
+/* Header (Top Nav) */
+.emp-header {
+    grid-area: HEADER;
+    background-color: var(--neutral-900);
+    color: var(--dark-900);
+    border-bottom: 1px solid var(--neutral-800);
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
+    height: 60px;
+}
+
+.top-nav .nav-brand {
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: 0.5px;
+}
+
+.top-nav ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.top-nav a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.top-nav a:hover {
+    color: var(--dark-900);
+}
+
+
+/* Aside (Sidebar) */
+.emp-aside-nav {
+    grid-area: ASIDE;
+    background-color: var(--brand-primary);
+    color: var(--dark-900);
+    padding: 1.5rem 1rem;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+    z-index: 10;
+}
+
+.side-nav .sidebar-header {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #93c5fd;
+    margin-bottom: 1rem;
+    padding-left: 0.75rem;
+}
+
+.side-nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.side-nav a {
+    display: block;
+    color: #eff6ff;
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.side-nav a:hover, 
+.side-nav a.active {
+    background-color: var(--brand-primary-hover);
+    color: #fff;
+}
+
+
+/* Main Workspace Content */
+.emp-main-content {
+    grid-area: MAIN;
+    overflow-y: auto; /* Allow layout workspace content to scroll safely */
+    padding: 2rem;
+}
+
+.emp-main-content .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.emp-main-content h1 {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+    color: var(--neutral-900);
+}
+
+
+/* Footer Component */
+.emp-footer-content {
+    grid-area: FOOTER;
+    background-color: var(--neutral-900);
+    color: var(--dark-900);
+    border-top: 1px solid var(--border-color);
+    padding: 1rem 2rem;
+    text-align: center;
+    font-size: 0.85rem;
+}
+.emp-header {
+    grid-area: HEADER;
+    background-color: var(--neutral-900);
+    color: var(--dark-900);
+    border-bottom: 1px solid var(--neutral-800);
+}
+
+@media only screen and (max-width:768px){
+    body {
+        display: grid;
+        grid-template-areas: 
+            "HEADER"
+            "ASIDE"
+            "MAIN"
+            "FOOTER";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr auto;
+    }
+    .emp-header {
+        grid-area: HEADER;
+    }
+    .emp-aside-nav {
+        grid-area: ASIDE;
+    }
+    .emp-main-content {
+        grid-area: MAIN;
+    }
+    .emp-footer-content {
+        grid-area: FOOTER;
+    }
+}

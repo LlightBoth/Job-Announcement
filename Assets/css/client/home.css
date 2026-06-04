@@ -1,0 +1,140 @@
+/* ==========================================================================
+   Hero Overlays & Glowing Typography System
+   ========================================================================== */
+
+/* 1. Relative Positioning Context */
+.hero-banner-wrapper {
+  position: relative;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.hero-banner-wrapper img {
+  width: 100%;
+  height: 480px;                  /* Explicitly tracks banner depth */
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* 2. Dark Overlay Layer & Content Alignment Box */
+.hero-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  /* Creates a smooth gradient layer ensuring dark & light modes maintain text legibility */
+  background: linear-gradient(to right, rgba(11, 15, 25, 0.85) 40%, rgba(11, 15, 25, 0.2));
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: flex-start;
+  padding: 3rem;
+  box-sizing: border-box;
+}
+
+/* Custom layout typography specifically optimized to sit inside banners */
+.text-muted-hero {
+  color: #e2e8f0;
+  font-size: 1.2rem;
+  margin-top: 0;
+}
+.hero-section {
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;               /* Ensures the image respects the container corners */
+    display: flex;                  /* Forces the container to perfectly shrink-wrap the image height */
+}
+
+.hero-section img {
+    width: 100%;                    /* Spans the entire width of the container */
+    height: 600px;                   /* Maintains natural aspect ratio without squishing */
+    display: block;                 /* Eliminates default inline element line-gap at the bottom */
+    object-fit: cover;
+}
+
+.hero-footer {
+    display: flex;
+    color: var(--text-main);
+    background-color: var(--bg-main);
+    box-shadow: var(--shadow-md);
+}
+
+.hero-footer .card {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s ease;
+}
+
+/* Subtle hover interaction tweak to make them feel premium */
+.hero-footer .card:hover {
+  transform: translateY(-2px);
+  border-color: var(--brand-primary);
+}
+
+/* Shared background styles for all three blocks */
+.hero-img-1, 
+.hero-img-2, 
+.hero-img-3 {
+  background-image: url("../../images/photo_5_2026-05-28_02-27-14.jpg");
+  background-size: 300% auto; /* Forces the image to stretch across all 3 column spaces */
+  background-repeat: no-repeat;
+}
+
+/* Slice 1: Left Side */
+.hero-img-1 {
+  background-position: left bottom; /* Slices the leftmost 33% */
+}
+
+/* Slice 2: Middle Side */
+.hero-img-2 {
+  background-position: center bottom; /* Slices the middle 33% */
+}
+
+/* Slice 3: Right Side */
+.hero-img-3 {
+  background-position: right bottom; /* Slices the rightmost 33% */
+}
+
+.hero-text {
+  color: #fff;
+}
+
+.opportunity {
+    width: 100%;
+    overflow: hidden;    
+}
+.opportunity img {
+    width: 100%;                    /* Spans the entire width of the container */
+    height: 420px;                   /* Maintains natural aspect ratio without squishing */
+    object-fit: cover;              /* Clips image crisply if heights shift unexpectedly */
+    display: block;
+    box-shadow: var(--shadow-md);
+    border-radius: 16px;
+}
+
+/* ==========================================================================
+   Responsive Adaptations
+   ========================================================================== */
+@media only screen and (max-width: 768px) {
+  .hero-banner-wrapper img {
+    height: 360px;
+  }
+  
+  .glow-text {
+    font-size: 2.25rem;
+  }
+  
+  .hero-content {
+    padding: 1.5rem;
+    background: rgba(11, 15, 25, 0.8); /* Solid overlay format to help mobile readability */
+  }
+}
