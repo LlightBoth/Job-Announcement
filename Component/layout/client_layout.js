@@ -47,7 +47,7 @@ header.innerHTML = (
                     <div class="dropdown-content">
                         <a href="./profile.html">Profile</a>
                         <a onclick="toggleTheme()">Mode 🌓</a>
-                        <a href="#logout">Logout</a>
+                        <a href="../auth/login.html" id="logoutLink">Logout</a>
                     </div>
                 </li>
             </ul>

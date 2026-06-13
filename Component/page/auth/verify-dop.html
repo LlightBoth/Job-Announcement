@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify OTP</title>
+    <link rel="stylesheet" href="../../../Assets/css/auth.css">
+</head>
+
+<body>
+    <div class="full-page-center">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6">
+                <div class="form-container">
+                    <h2>Verify OTP Code</h2>
+                    <p class="form-description">
+                        Enter the 6 digit code.
+                    </p>
+
+                    <div id="alertContainer" class="alert-container"></div>
+
+                    <form id="otpForm" method="post" action="">
+                        <div class="otp-container">
+                            <input type="text" class="otp-input" maxlength="1" pattern="[0-9]" required>
+                            <input type="text" class="otp-input" maxlength="1" pattern="[0-9]" required>
+                            <input type="text" class="otp-input" maxlength="1" pattern="[0-9]" required>
+                            <input type="text" class="otp-input" maxlength="1" pattern="[0-9]" required>
+                            <input type="text" class="otp-input" maxlength="1" pattern="[0-9]" required>
+                            <input type="text" class="otp-input" maxlength="1" pattern="[0-9]" required>
+                        </div>
+
+                        <button type="submit" class="btn-primary">Verify Code</button>
+                    </form>
+
+                    <p class="form-footer">
+                        Didn't receive the code? <a href="#" id="resendOTP">Resend OTP</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-3"></div>
+        </div>
+    </div>
+
+    <script src="../../../Assets/js/auth/otp-script.js"></script>
+</body>
+
+</html>

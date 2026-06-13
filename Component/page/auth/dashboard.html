@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - CareerConnect Job Portal</title>
+    <link rel="stylesheet" href="../../../Assets/css/auth.css">
+    <script>
+        if (!localStorage.getItem('currentUser')) {
+            window.location.href = 'login.html';
+        }
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        <ul>
+            <li><a href="dashboard.html" style="font-weight: 700; color: #818cf8;">💼 CareerConnect</a></li>
+            <li><a href="#jobs">Browse Jobs</a></li>
+            <li><a href="#applied">My Applications</a></li>
+            <li class="dropdown" style="float: right;">
+                <a href="javascript:void(0)" class="dropbtn" id="navUser">Profile ▼</a>
+                <div class="dropdown-content">
+                    <a href="#profile">Account Settings</a>
+                    <a href="../../page/auth/login.html" id="logoutLink" style="color: #dc2626; font-weight: 600;">Logout</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="dashboard-container">
+        <div class="dashboard-hero">
+            <h1>Welcome back, <span id="userWelcomeName">User</span>!</h1>
+            <p>Your local dashboard is ready. Explore new opportunities tailored just for you.</p>
+        </div>
+
+        <div class="row">
+            <div class="col-4">
+                <div class="profile-card" id="profile">
+                    <h3>My Profile Info</h3>
+                    <div class="profile-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Full Name</span>
+                            <span class="detail-value" id="userFullName">-</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Email Address</span>
+                            <span class="detail-value" id="userEmail">-</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Phone Number</span>
+                            <span class="detail-value" id="userPhone">-</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Account Level</span>
+                            <span class="detail-value" id="userRole">Standard Member <span
+                                    class="badge">Verified</span></span>
+                        </div>
+                    </div>
+                    <div style="margin-top: 30px;">
+                        <button class="btn-primary" style="padding: 10px; font-size: 14px;">Edit Profile</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-8">
+                <div class="jobs-section" id="jobs">
+                    <h3>Recommended Jobs For You</h3>
+                    <div class="job-list">
+                        <div class="job-card">
+                            <div class="job-info">
+                                <h4>Lead Frontend Engineer</h4>
+                                <p>Google Inc. • Mountain View, CA (Hybrid)</p>
+                            </div>
+                            <div>
+                                <span class="job-tag full-time">Full-time</span>
+                                <a href="javascript:void(0)" class="btn-secondary" style="margin-left: 12px;"
+                                    onclick="applyJob('Lead Frontend Engineer')">Apply</a>
+                            </div>
+                        </div>
+
+                        <div class="job-card">
+                            <div class="job-info">
+                                <h4>Senior Node.js Developer</h4>
+                                <p>Netflix • Los Gatos, CA (Remote)</p>
+                            </div>
+                            <div>
+                                <span class="job-tag remote">Remote</span>
+                                <a href="javascript:void(0)" class="btn-secondary" style="margin-left: 12px;"
+                                    onclick="applyJob('Senior Node.js Developer')">Apply</a>
+                            </div>
+                        </div>
+
+                        <div class="job-card">
+                            <div class="job-info">
+                                <h4>Product Designer</h4>
+                                <p>Airbnb • San Francisco, CA (Hybrid)</p>
+                            </div>
+                            <div>
+                                <span class="job-tag full-time">Full-time</span>
+                                <a href="javascript:void(0)" class="btn-secondary" style="margin-left: 12px;"
+                                    onclick="applyJob('Product Designer')">Apply</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentUserStr = localStorage.getItem('currentUser');
+            if (!currentUserStr) {
+                window.location.href = 'login.html';
+                return;
+            }
+
+            const currentUser = JSON.parse(currentUserStr);
+
+            document.getElementById('userWelcomeName').textContent = currentUser.fullname || 'User';
+            document.getElementById('userFullName').textContent = currentUser.fullname || '-';
+            document.getElementById('userEmail').textContent = currentUser.email || '-';
+            document.getElementById('userPhone').textContent = currentUser.phone || '-';
+            document.getElementById('navUser').textContent = (currentUser.fullname ? currentUser.fullname.split(' ')[0] : 'User') + ' ▼';
+
+            if (currentUser.email.toLowerCase() === 'admin@example.com') {
+                document.getElementById('userRole').innerHTML = 'Administrator <span class="badge" style="background-color: #dc2626;">System</span>';
+            }
+
+        });
+
+        function applyJob(jobTitle) {
+            alert(`Application for "${jobTitle}" submitted successfully! (Simulation)`);
+        }
+    </script>
+    <script src="../../../Assets/js/auth/logout.js"></script>
+</body>
+
+</html>
