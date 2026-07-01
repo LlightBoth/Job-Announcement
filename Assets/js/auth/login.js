@@ -1,20 +1,8 @@
-function initDefaultAccounts() {
+async function initDefaultAccounts() {
     if (!localStorage.getItem('users')) {
-        const defaultAccounts = [
-            {
-                "email": "admin@example.com",
-                "password": "12345678",
-                "fullname": "Admin User",
-                "phone": "+855 12 345 678"
-            },
-            {
-                "email": "user@example.com",
-                "password": "12345678",
-                "fullname": "Regular User",
-                "phone": "+855 87 654 321"
-            }
-        ];
-        localStorage.setItem('users', JSON.stringify(defaultAccounts));
+        const all_users = await fetch('/Database/users.json');
+        const user_res = await all_users.json();
+        const user_data = localStorage.setItem('users', JSON.stringify(user_res));
     }
 }
 
@@ -32,10 +20,10 @@ function showAlert(message, type) {
 document.addEventListener('DOMContentLoaded', () => {
     initDefaultAccounts();
 
-    if (localStorage.getItem('currentUser')) {
-        window.location.href = '../client/.html';
-        return;
-    }
+    // if (localStorage.getItem('currentUser')) {
+    //     window.location.href = '../client/home.html';
+    //     return;
+    // }
 
     const loginForm = document.getElementById('loginForm');
     const emailInput = document.getElementById('email');
@@ -81,6 +69,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const submitBtn = loginForm.querySelector('.btn-primary');
             if (submitBtn) submitBtn.disabled = true;
+
+            if (user.is_role === 1) {
+                setTimeout(() => {
+                    window.location.href = '../employee/dashboard.html';
+                }, 1000);
+                return;
+            }
 
             setTimeout(() => {
                 window.location.href = '../client/home.html';
