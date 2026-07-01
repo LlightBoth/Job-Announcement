@@ -49,7 +49,7 @@ function renderCompany(company) {
                 <div class="col-12" style="background-color: var(--dark-200); padding: 40px; border-radius: 12px; border: 1px solid var(--dark-300);">
                     <div class="d-flex" style="align-items: center; gap: 1.5rem;">
                         <div style="flex-shrink: 0;">
-                            <img src="${company.logo}" alt="${company.name}" style="border-radius: 12px; border: 2px solid var(--dark-300); display: block;">
+                            <img src="${company.logo}" alt="${company.name}" style="border-radius: 12px; border: 2px solid var(--dark-300); display: block; width: 220px; height: 130px;">
                         </div>
                         <div style="flex-grow: 1;">
                             <span class="badge badge--remote mb-1" style="background-color: color-mix(in srgb, var(--brand-primary) 20%, transparent); color: var(--neutral-100);">Verified Profile</span>

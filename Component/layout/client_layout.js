@@ -49,7 +49,7 @@ header.innerHTML = (
                     <div class="dropdown-content">
                         <a href="./profile.html">Profile</a>
                         <a onclick="toggleTheme()">Mode 🌓</a>
-                        ${current_user.is_role === 1 ? `<a href="/Component/page/employee/dashboard.html">Employee</a>` : ``}
+                        ${current_user && current_user.is_role === 1 ? `<a href="../employee/dashboard.html">Employee</a>` : ``}
                         ${current_user ? `<a href="../auth/login.html" id="logoutLink">Logout</a>` : `<a href="../auth/login.html">Login</a>`}
                     </div>
                 </li>

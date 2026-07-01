@@ -23,7 +23,7 @@ const Get_Apply_Detail = async() => {
         // Check authentiction
         const current_user = JSON.parse(localStorage.getItem('currentUser'));
         if (!current_user) {
-            window.location.href = "/Component/page/auth/login.html";
+            window.location.href = "../auth/login.html";
             return;
         }
 
@@ -191,7 +191,7 @@ if (applyForm) {
         localStorage.setItem('cv_applications', JSON.stringify(cvApps));
 
         alert('Congratulations! Your CV application was successfully submitted.');
-        window.location.href = '../client/home.html';
+        window.location.href = '../client/index.html';
     });
 }
 

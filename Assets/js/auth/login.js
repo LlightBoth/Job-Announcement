@@ -1,6 +1,6 @@
 async function initDefaultAccounts() {
     if (!localStorage.getItem('users')) {
-        const all_users = await fetch('/Database/users.json');
+        const all_users = await fetch('../../../Database/users.json');
         const user_res = await all_users.json();
         const user_data = localStorage.setItem('users', JSON.stringify(user_res));
     }

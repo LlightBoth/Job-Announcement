@@ -13,7 +13,7 @@
       "salary": "$140k - $165k",
       "company_id": 1,
       "createdAt": "2026-05-01",
-      "imageURI": "/Assets/images/fullstack.jpg"
+      "imageURI": "../../../Assets/images/fullstack.jpg"
     },
     {
       "id": 2,
@@ -28,7 +28,7 @@
       "salary": "$85k - $110k",
       "company_id": 2,
       "createdAt": "2026-05-03",
-      "imageURI": "/Assets/images/ux-ui.jpg"
+      "imageURI": "../../../Assets/images/ux-ui.jpg"
     },
     {
       "id": 3,
@@ -43,7 +43,7 @@
       "salary": "$70k - $90k",
       "company_id": 3,
       "createdAt": "2026-05-05",
-      "imageURI": "/Assets/images/marketing.jpg"
+      "imageURI": "../../../Assets/images/marketing.jpg"
     },
     {
       "id": 4,
@@ -58,7 +58,7 @@
       "salary": "$60/hr - $80/hr",
       "company_id": 1,
       "createdAt": "2026-05-07",
-      "imageURI": "/Assets/images/backend.jpg"
+      "imageURI": "../../../Assets/images/backend.jpg"
     },
     {
       "id": 5,
@@ -73,7 +73,7 @@
       "salary": "$45k - $55k",
       "company_id": 2,
       "createdAt": "2026-05-09",
-      "imageURI": "/Assets/images/software.jpg"
+      "imageURI": "../../../Assets/images/software.jpg"
     },
     {
       "id": 6,
@@ -88,7 +88,7 @@
       "salary": "$95k - $120k",
       "company_id": 3,
       "createdAt": "2026-05-10",
-      "imageURI": "/Assets/images/mobile.jpg"
+      "imageURI": "../../../Assets/images/mobile.jpg"
     },
     {
       "id": 7,
@@ -103,7 +103,7 @@
       "salary": "$75k - $98k",
       "company_id": 2,
       "createdAt": "2026-05-12",
-      "imageURI": "/Assets/images/data-analysis.jpg"
+      "imageURI": "../../../Assets/images/data-analysis.jpg"
     },
     {
       "id": 8,
@@ -118,7 +118,7 @@
       "salary": "$65k - $85k",
       "company_id": 3,
       "createdAt": "2026-05-14",
-      "imageURI": "/Assets/images/it-management.jpg"
+      "imageURI": "../../../Assets/images/it-management.jpg"
     },
     {
       "id": 9,
@@ -133,7 +133,7 @@
       "salary": "$125k - $150k",
       "company_id": 1,
       "createdAt": "2026-05-16",
-      "imageURI": "/Assets/images/dev-op.jpg"
+      "imageURI": "../../../Assets/images/dev-op.jpg"
     },
     {
       "id": 10,
@@ -148,7 +148,7 @@
       "salary": "$30/hr - $45/hr",
       "company_id": 1,
       "createdAt": "2026-05-18",
-      "imageURI": "/Assets/images/content.jpg"
+      "imageURI": "../../../Assets/images/content.jpg"
     }
   ]
 }
