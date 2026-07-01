@@ -8,7 +8,7 @@ const footer = document.querySelector('.footer-content');
 header.innerHTML = (
     `<nav>
         <ul>
-        <li><a href="./home.html">Home</a></li>
+        <li><a href="./index.html">Home</a></li>
         <li><a href="./jobs.html">Browse Jobs</a></li>
 
         <li class="dropdown">

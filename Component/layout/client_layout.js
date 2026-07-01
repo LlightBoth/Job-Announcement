@@ -11,11 +11,11 @@ header.innerHTML = (
     `   
         <nav>
             <div class="nav-start">
-                <h3 onclick="alert('hello')">Logo</h3>
+                <a href="./index.html" style="text-decoration: none;"><h3 style="color: #fff;">Tonle Job</h3></h3>
                 <h3 class="burger-menu">☰</h3>
             </div>
             <ul class="nav-end">
-                <li><a href="./home.html">Home</a></li>
+                <li><a href="./index.html">Home</a></li>
                 <li><a href="./jobs.html">Browse Jobs</a></li>
 
                 <li class="dropdown">
