@@ -11,7 +11,7 @@ header.innerHTML = (
     `   
         <nav>
             <div class="nav-start">
-                <a href="./index.html" style="text-decoration: none;"><h3 style="color: #fff;">Tonle Job</h3></h3>
+                <h3 style="color: #fff;">Tonle Job</h3>
                 <h3 class="burger-menu">☰</h3>
             </div>
             <ul class="nav-end">
@@ -45,7 +45,7 @@ header.innerHTML = (
                 </li>
 
                 <li class="dropdown theme-toggle">
-                    <a href="#" class="dropbtn">Setting ▾</a>
+                    <a href="./setting.html" class="dropbtn">Setting ▾</a>
                     <div class="dropdown-content">
                         <a href="./profile.html">Profile</a>
                         <a onclick="toggleTheme()">Mode 🌓</a>
@@ -57,6 +57,28 @@ header.innerHTML = (
         </nav>
     `
 );
+// ==========================
+//      Add Logout Content
+// ==========================
+
+try {
+    const logoutLink = document.getElementById('logoutLink');
+    if (logoutLink) {
+        logoutLink.addEventListener('click', () => {
+            // Clear all localstorage
+            localStorage.clear(); 
+        });
+    }
+    
+} catch (error) {
+    const logoutLink = document.getElementById('logoutLink');
+    if (logoutLink) {
+        logoutLink.addEventListener('click', () => {
+            localStorage.removeItem('currentUser');
+        });
+    }
+    console.error('error: ', error);
+}
 
 // ==========================
 //      Footer Content

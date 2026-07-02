@@ -86,7 +86,7 @@ async function RenderJobDetail(job) {
                 <p class="text-muted mt-1"><i class="bi bi-geo-alt-fill px-2"></i> ${company_detail?.location || 'Unknown Location'} </p>
                 <p class="text-muted"> <i class="bi bi-calendar px-2"></i> Posted: ${job?.createdAt || 'Unknown Date'} </p>
             </div>
-            <div class="py-4">
+            <div class="py-4 jd-space">
                 <h3 class="pb-1">Job Benefits</h3>
                 <ul>
                     ${job_benefit
@@ -96,7 +96,7 @@ async function RenderJobDetail(job) {
                 </ul>
                     
             </div>
-            <div class="py-4">
+            <div class="py-4 jd-space">
                 <h3 class="pb-1">Requirement</h3>
                 <ul>
                     ${job_requirement
@@ -105,11 +105,11 @@ async function RenderJobDetail(job) {
                     }
                 </ul>
             </div>
-            <div class="py-4">
+            <div class="py-4 jd-space">
                 <h3 class="pb-1">Description</h3>
                 <p class="text-muted">${job?.desc || 'Unknown description'}</p>
             </div>
-            <div>
+            <div class="py-4 jd-space">
                 <a href="apply_cv.html?id=${job.id}" class="btn btn-primary p-4 ">Apply Now</a>
             </div>
         </div>

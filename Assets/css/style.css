@@ -613,6 +613,9 @@ h3{
         width:50%;
         border-radius: 12px;
     }
+    .jd-space {
+      padding-left: 24px;
+    }
 
     [class*="col-"]{
         width:100%;

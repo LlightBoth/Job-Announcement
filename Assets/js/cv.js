@@ -11,13 +11,13 @@ const initCvManager = () => {
     const defaultApps = [
         {
             "id": "app_1",
-            "fullname": "John Doe",
-            "email": "johndoe@example.com",
+            "fullname": "Jake Jone",
+            "email": "jonedoe@example.com",
             "phone": "+855 77 666 555",
             "jobTitle": "Senior Full-Stack Engineer (C# / React)",
             "companyName": "Nexus Financial Fintech",
             "coverLetter": "I have 6 years of experience building enterprise systems in .NET and React. I am excited to join Nexus Financial.",
-            "fileName": "John_Doe_CV.pdf",
+            "fileName": "Jake_Jone_CV.pdf",
             "status": "Interviewing",
             "appliedDate": "2026-06-25"
         },

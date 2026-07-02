@@ -557,6 +557,9 @@ body {
     border-top: 1px solid var(--border-color);
     background-color: color-mix(in srgb, var(--border-color) 10%, transparent);
 }
+.mobile-only {
+    display: none;
+}
 
 /* Form Controls (Inputs, Selects, Textareas) */
 .form-label {
@@ -599,3 +602,48 @@ body {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%2394a3b8' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
 }
 
+@media only screen and (max-width: 768px) {
+    /* 1. Reset Body Grid behavior to allow overlay mechanics */
+    body {
+        grid-template-areas: 
+            "HEADER"
+            "MAIN"
+            "FOOTER";
+        grid-template-columns: 1fr;
+        position: relative;
+    }
+
+    /* 2. Configure the mobile Sidebar to transition into view over content */
+    .emp-aside-nav {
+        position: fixed;
+        top: 60px; /* Aligns right beneath your top navbar */
+        left: 0;
+        width: 260px;
+        height: calc(100vh - 60px);
+        z-index: 98;
+        transform: translateX(-100%); /* Keeps hidden off screen to the left */
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        display: block !important; /* Overrides desktop layout defaults safely */
+    }
+
+    /* 3. The trigger class toggled by Javascript */
+    .emp-aside-nav.aside-active {
+        transform: translateX(0); /* Slides onto screen */
+    }
+    
+    /* 4. Smooth out header collapsible area toggles */
+    .top-nav .nav-end {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+    
+    .top-nav .nav-end.active {
+        max-height: 200px;
+        opacity: 1;
+    }
+    .mobile-only {
+        display: inline-block;
+    }
+}

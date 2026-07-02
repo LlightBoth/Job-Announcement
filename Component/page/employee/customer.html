@@ -12,28 +12,9 @@
   <link rel="stylesheet" href="../../../Assets/css/employee/layout.css">
 </head>
 <body>
-
-    <header class="emp-header" role="banner">
-        <nav class="top-nav" aria-label="Global Administration Navigation">
-            <div class="nav-brand">
-                <i class="bi bi-briefcase-fill px-2" style="color: var(--brand-primary);" aria-hidden="true"></i>
-                <span>Tonle Job</span>
-            </div>
-            <ul class="d-flex gap-1 list-unstyled" style="margin: 0; align-items: center;">
-                <li>
-                    <a href="../client/profile.html" aria-label="View user profile documentation" style="background-color: transparent;">
-                        <i class="bi bi-person-circle px-1" aria-hidden="true"></i> Profile
-                    </a>
-                </li>
-                <li>
-                    <button class="btn-theme-toggle" onclick="toggleTheme()" aria-label="Toggle user interface theme mode" style="background: transparent; border: none; color: inherit; cursor: pointer; display: flex; align-items: center; font-size: inherit;">
-                        <i class="bi bi-moon-stars px-1" aria-hidden="true"></i> Mode
-                    </button>
-                </li>
-            </ul>
-        </nav>
-    </header>
-
+    <!-- Header Content -->
+    <header class="header emp-header" style="padding: 0; width: 100%;" role="banner"></header>
+    
     <aside class="emp-aside-nav" role="complementary" aria-label="Console Subnavigation Matrix">
         <nav class="side-nav">
             <div class="sidebar-header" id="nav-header-mgmt">Job-Announcement</div>
@@ -144,11 +125,11 @@
         </div>
     </div>
 
-    <footer class="emp-footer-content" role="contentinfo">
-        <p style="margin: 0;">&copy; 2026 Employer Management Portal. All application structures validated securely.</p>
-    </footer>
+    <!-- Footer Content -->
+    <footer class="footer-content emp-footer-content" role="contentinfo"></footer>
 
     <script src="../../../Assets/js/mode.js"></script>
     <script src="../../../Assets/js/customer.js"></script>
+    <script src="../../layout/employee_layout.js"></script>
 </body>
 </html>
