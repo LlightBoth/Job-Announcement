@@ -10,7 +10,7 @@ const Get_All_Profiles = async () => {
         const current_user = JSON.parse(localStorage.getItem('currentUser'));
         if (!current_user) {
             // redirect to login
-            window.location.href = "/Component/page/auth/login.html";
+            window.location.href = "../auth/login.html";
             return;
         }
         renderProfiles(current_user);

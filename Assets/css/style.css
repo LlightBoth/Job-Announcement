@@ -616,6 +616,9 @@ h3{
     .jd-space {
       padding-left: 24px;
     }
+    .dropdown:hover .dropdown-content {
+      display: none;
+    } 
 
     [class*="col-"]{
         width:100%;

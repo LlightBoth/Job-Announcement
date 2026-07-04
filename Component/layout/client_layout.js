@@ -37,7 +37,7 @@ header.innerHTML = (
                 <li><a href="./company.html">Companies</a></li>
 
                 <li class="dropdown">
-                    <a href="javascript:void(0)" class="dropbtn">Services ▾</a>
+                    <a href="./service.html" class="dropbtn">Services ▾</a>
                     <div class="dropdown-content">
                         <a href="about.html">About Us</a>
                         <a href="./privacy.html">Privacy & Policy</a>
@@ -117,7 +117,7 @@ footer.innerHTML = (
                 <h3>Subscription Letter</h3>
                 <div class="py-2 text-center">
                     <form action="#" method="post">
-                        <input type="email" name="email" class="form-control" id="email" placeholder="finn@gmail.com" required><br>
+                        <input type="email" name="email" class="form-control" id="email" placeholder="someone@gmail.com" required><br>
                         <button type="submit" class="form-control">Subscription</button>
                     </form>
                 </div>
@@ -125,7 +125,7 @@ footer.innerHTML = (
             <div class="personal-detail col-2 ">
                 <h3>More About Us</h3>
                 <h4>Email: </h3>
-                <p>Llightboth@gmail.com</p><br>
+                <p>Llightboth639@gmail.com</p><br>
                 <h4>Contact-Us: </h3>
                 <p> 012-345-678</p>
             </div>

@@ -46,21 +46,35 @@ main.innerHTML = (`
                     Access your workspace, view professional assignments, and explore internal layout controls.
                 </p>
             </div>
-        </div>` :
-        ``
+        </div>` : ``
     } 
 
-    <div class="card logout" id="logoutLink" style="cursor: pointer;">
-        <div class="card_body">
-            <div class="card_header">
-                <span class="badge badge--fulltime">Session</span>
-                <img src="../../../Assets/images/logout.png" alt="Logout" style="width: 100%; height: 100%; object-fit: cover;">        
+    ${current_user_session ? 
+        `<div class="card logout" id="logoutLink" style="cursor: pointer;">
+            <div class="card_body">
+                <div class="card_header">
+                    <span class="badge badge--fulltime">Session</span>
+                    <img src="../../../Assets/images/logout.png" alt="Logout" style="width: 100%; height: 100%; object-fit: cover;">        
+                </div>
+                
+                <h2 class="text-heading">Sign Out</h2>
+                <p class="text-muted">
+                    Logout safely from your account session.
+                </p>
             </div>
-            
-            <h2 class="text-heading">Sign Out</h2>
-            <p class="text-muted">
-                Log out safely from your account session to secure your data on this device.
-            </p>
-        </div>
-    </div>
+        </div>` : 
+        `<div class="card" onclick="window.location.href='../auth/login.html'" style="cursor: pointer;">
+            <div class="card_body">
+                <div class="card_header">
+                    <span class="badge badge--fulltime">Session</span>
+                    <img src="../../../Assets/images/login.png" alt="Logout" style="width: 100%; height: 100%; object-fit: cover;">        
+                </div>
+                
+                <h2 class="text-heading">Sign In</h2>
+                <p class="text-muted">
+                    Login to your account.
+                </p>
+            </div>
+        </div>`
+    }
 `)
