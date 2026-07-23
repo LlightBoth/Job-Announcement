@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "email": "admin@admin.com",
+    "password": "$2b$10$m3kQ3KXoExzAieuXfS6vbu9mkYbXHHPOuGGIa4vT12CYIo72iau86",
+    "fullname": "Administrator",
+    "phone": "+8551237483",
+    "status": "teacher",
+    "is_role": 1,
+    "createdAt": "2026-07-23",
+    "address": "Phnom Penh, toul tom pung"
+  },
+  {
+    "id": 2,
+    "email": "finn123@gmail.com",
+    "password": "$2b$10$cgNQ4K6Lup.lyduQT3Fyq.B9EMHR9hT.e41tK8MTS0epAyJIcSsyO",
+    "fullname": "finn123",
+    "phone": "+855928832",
+    "status": "student",
+    "is_role": 0,
+    "createdAt": "2026-07-23"
+  }
+]
