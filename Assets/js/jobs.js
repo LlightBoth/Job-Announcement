@@ -64,7 +64,7 @@ function renderJobs(jobJson) {
                 <div class="card_body">
 
                     <div class="card_header">
-                        <img src="${j.imageURI}" alt="${j.title}" class="card-image">
+                        <img src="${j.imageURI || "../../../Assets/images/default.png"}" alt="${j.title}" class="card-image">
 
                         <span class="badge badge--${j.type}">
                             ${j.badgeText}

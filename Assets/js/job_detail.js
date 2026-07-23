@@ -71,7 +71,7 @@ async function RenderJobDetail(job) {
     // Render Job_Detail via ID
     jobDetailContainer.innerHTML += (`
         <div class="col-4" >
-                <img src="${job.imageURI}" alt="company-image" class="text-center w-full">
+                <img src="${job.imageURI || "../../../Assets/images/default.png"}" alt="company-image" class="text-center w-full">
         </div>
         <div class="col-1"></div>
         <div class="col-6">
