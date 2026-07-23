@@ -11,7 +11,7 @@ header.innerHTML = (
     `   
         <nav>
             <div class="nav-start">
-                <h3 style="color: #fff;">Tonle Job</h3>
+                <h3 style="color: #fff;">RIVER <span style="color: cyan;">Job</span></h3>
                 <h3 class="burger-menu">☰</h3>
             </div>
             <ul class="nav-end">
@@ -125,9 +125,9 @@ footer.innerHTML = (
             <div class="personal-detail col-2 ">
                 <h3>More About Us</h3>
                 <h4>Email: </h3>
-                <p>Llightboth639@gmail.com</p><br>
+                <p>k.virakboth639@gmail.com</p><br>
                 <h4>Contact-Us: </h3>
-                <p> 012-345-678</p>
+                <p> 011-393-075</p>
             </div>
         </div>
     `
