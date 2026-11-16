@@ -11,7 +11,7 @@ header.innerHTML = (
     `   
         <nav>
             <div class="nav-start">
-                <h3 style="color: #fff;">RIVER <span style="color: cyan;">Job</span></h3>
+                <h2 style="color: #fff;">River<span style="color: #007bff;">Jobs</span></h2>
                 <h3 class="burger-menu">☰</h3>
             </div>
             <ul class="nav-end">
