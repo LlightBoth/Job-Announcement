@@ -4,6 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Job Board Navigation and Footer</title>
+  <script>
+    // Ensure relative imports (CSS, JS, images, links) resolve correctly when Cloudflare Pages
+    // rewrites /Component/page/client/index.html to /Component/page/client (without trailing slash)
+    if (location.protocol.startsWith('http') && location.pathname.includes('/Component/page/client')) {
+      document.write('<base href="' + location.origin + '/Component/page/client/">');
+    }
+  </script>
   <link rel="stylesheet" href="../../../Assets/css/style.css">
   <link rel="stylesheet" href="../../../Assets/css/client/home.css">
   
@@ -95,7 +102,7 @@
           <!-- Card 1 -->
           <article class="card">
             <div class="card_header">
-              <img src="../../..//Assets/images/fullstack.jpg" alt="Full Stack">
+              <img src="../../../Assets/images/fullstack.jpg" alt="Full Stack">
 
               <span class="badge badge--fulltime">Full-Time</span>
 

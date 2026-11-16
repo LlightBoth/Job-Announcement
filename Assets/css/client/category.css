@@ -1,0 +1,7 @@
+/* Category Page Styles */
+.category-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.category-card:hover {
+  transform: translateY(-2px);
+}
